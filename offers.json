@@ -1,0 +1,81 @@
+{
+"offers": [
+    {
+        "title": "Offer 1",
+        "desc": "Lorem ipsum is a dummy text which has no meaning",
+        "Price_List": "GymAminities",
+        "Dates": "1/6/2012 - 5/8/2012",
+        "Change_Type": "Non-Recurring"
+    },
+    {
+        "title": "Offer 2",
+        "desc": "Lorem ipsum is a dummy text which has no meaning",
+        "Price_List": "GymAminities",
+        "Dates": "4/1/2016 - 15/1/2016",
+        "Change_Type": "Non-Recurring"
+    },
+    {
+        "title": "Offer 3",
+        "desc": "Lorem ipsum is a dummy text which has no meaning",
+        "Price_List": "GymAminities",
+        "Dates": "4/1/2016 - 15/1/2016",
+        "Change_Type": "Non-Recurring"
+    },
+    {
+        "title": "Offer 4",
+        "desc": "Lorem ipsum is a dummy text which has no meaning",
+        "Price_List": "GymAminities",
+        "Dates": "4/1/2016 - 15/1/2016",
+        "Change_Type": "Recurring"
+    },
+    {
+        "title": "Offer 5",
+        "desc": "Lorem ipsum is a dummy text which has no meaning",
+        "Price_List": "GymAminities",
+        "Dates": "4/1/2016 - 15/1/2016",
+        "Change_Type": "Non-Recurring"
+    },
+    {
+        "title": "Offer 6",
+        "desc": "Lorem ipsum is a dummy text which has no meaning",
+        "Price_List": "GymAminities",
+        "Dates": "4/1/2016 - 15/1/2016",
+        "Change_Type": "Non-Recurring"
+    },
+	{
+        "title": "Offer 7",
+        "desc": "Lorem ipsum is a dummy text which has no meaning",
+        "Price_List": "GymAminities",
+        "Dates": "4/1/2016 - 15/1/2016",
+        "Change_Type": "Non-Recurring"
+    },
+	{
+        "title": "Offer 8",
+        "desc": "Lorem ipsum is a dummy text which has no meaning",
+        "Price_List": "GymAminities",
+        "Dates": "4/1/2016 - 15/1/2016",
+        "Change_Type": "Non-Recurring"
+    },
+	{
+        "title": "Offer 9",
+        "desc": "Lorem ipsum is a dummy text which has no meaning",
+        "Price_List": "GymAminities",
+        "Dates": "4/1/2016 - 15/1/2016",
+        "Change_Type": "Non-Recurring"
+    },
+	{
+        "title": "Offer 10",
+        "desc": "Lorem ipsum is a dummy text which has no meaning",
+        "Price_List": "GymAminities",
+        "Dates": "4/1/2016 - 15/1/2016",
+        "Change_Type": "Non-Recurring"
+    },
+	{
+        "title": "Offer 11",
+        "desc": "Lorem ipsum is a dummy text which has no meaning",
+        "Price_List": "GymAminities",
+        "Dates": "4/1/2016 - 15/1/2016",
+        "Change_Type": "Non-Recurring"
+    }
+]
+}

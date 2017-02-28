@@ -1,0 +1,11 @@
+<div ui-tree-handle="" class="tree-node tree-node-content ng-scope angular-ui-tree-handle">
+  <div class="tree-node-content ng-binding">
+    <a class="btn btn-success btn-xs" data-nodrag="" ng-click="toggle(this)"><span class="glyphicon glyphicon-chevron-down" ng-class="{'glyphicon-chevron-right': collapsed, 'glyphicon-chevron-down': !collapsed}"></span></a>
+    tree1 - item1
+    <a class="pull-right btn btn-danger btn-xs" data-nodrag="" ng-click="remove(this)"><span class="glyphicon glyphicon-remove"></span></a>
+    <a class="pull-right btn btn-primary btn-xs" data-nodrag="" ng-click="newSubItem(this)" style="margin-right: 8px;"><span class="glyphicon glyphicon-plus"></span></a>
+  </div>
+</div>
+<ol ui-tree-nodes="" ng-model="node.nodes" ng-class="{hidden: collapsed}" class="ng-pristine ng-untouched ng-valid ng-scope angular-ui-tree-nodes">
+  <!-- ngRepeat: node in node.nodes -->
+</ol>

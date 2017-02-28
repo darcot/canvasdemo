@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Drag Panel</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/angular-datepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	
+</head>
+<body ng-app="dragPane">
+	<div class="container">
+		<bg-splitter orientation="horizontal">
+		    <bg-pane min-size="150">
+		    	<div class="pane-container left-pane" ng-controller="myCtrl">
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<h2>Create New Offer</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<span>Icon</span>
+							<ul class="list-inline">
+								<li><button class="btn btn-info"><i class="glyphicon glyphicon-picture"></i></button></li>
+								<li><button class="btn btn-info"><i class="glyphicon glyphicon-picture"></i></button></li>
+								<li><button class="btn btn-info"><i class="glyphicon glyphicon-picture"></i></button></li>
+								<li><button class="btn btn-info"><i class="glyphicon glyphicon-picture"></i></button></li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<form action="" >
+							<div class="form-group col-md-12">
+							    <label for="name">Name</label>
+							    <input type="text" class="form-control" id="name" placeholder="Name" ng-model="name">
+							</div>
+							<div class="form-group col-md-12">
+							    <label for="desc">Description</label>
+							    <input type="text" class="form-control" id="desc" placeholder="Description" ng-model="desc">
+							</div>
+							<div class="form-group col-md-6 col-sm-12">
+							    <label for="available">Available</label>
+							    <datepicker>
+							      <input type="text" class="form-control" id="available" placeholder="Available" ng-model="available">
+							    </datepicker>
+							</div>
+							<div class="form-group col-md-6 col-sm-12">
+							    <label for="effective">effective</label>
+							    <datepicker>
+								  <input type="text" class="form-control" id="effective" placeholder="effective" ng-model="effective">
+								</datepicker>
+							</div>
+							<div class="form-controls col-md-12">
+								<button type="submit" ng-click="submit($event)" class="btn btn-info">Save</button>
+								<button type="submit" ng-click="clear($event)" class="btn btn-danger">Clear</button>
+							</div>
+						</form>
+					</div>
+		    	</div>
+		    </bg-pane>
+		    <bg-pane min-size="150">
+		    	<div class="row pane-container right-pane contacts">
+		    	</div>
+		    </bg-pane>
+		</bg-splitter>
+	</div>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="js/angular-datepicker.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script src="js/app.js"></script>	
+</body>
+</html>		

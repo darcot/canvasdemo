@@ -1,0 +1,27 @@
+<bg-splitter orientation="horizontal">
+    <bg-pane min-size="150">
+    	<div class="pane-container left-pane" ng-controller="ConnectedTreesCtrl">
+			<h3>Tree 1</h3>
+		    <div ui-tree id="tree1-root">
+		      	<ol ui-tree-nodes="" ng-model="tree1">
+		        	<li ng-repeat="node in tree1" ui-tree-node="" ng-include="'nodes_rendered1.html'"></li>
+		      	</ol>
+		    </div>
+
+			<h3>Data binding</h3>
+			<pre class="code">{{ tree1 | json }}</pre>
+    	</div>
+    </bg-pane>
+    <bg-pane min-size="150">
+    	<div class="pane-container right-pane" ng-controller="ConnectedTreesCtrl">
+    		<h3>Tree 2</h3>
+		    <div ui-tree id="tree2-root">
+		    <ol ui-tree-nodes="" ng-model="tree2">
+		    	<li ng-repeat="node in tree2" ui-tree-node="" ng-include="'nodes_rendered2.html'"></li>
+		    </ol>
+		    </div>
+		    <h3>Data binding</h3>
+		    <pre class="code">{{ tree2 | json }}</pre>
+    	</div>
+    </bg-pane>
+</bg-splitter>

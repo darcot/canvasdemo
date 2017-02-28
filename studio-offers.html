@@ -1,0 +1,28 @@
+<div class="row offers draggable-objects" ng-controller="offersCtrl">
+	<div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 view " ng-repeat="offer in offers | filter:search | orderBy:filter | orderBy:sort">
+		<div class="offer" ng-drag="true" ng-drag-data="offer" data-allow-transform="true">
+			<div class="title">
+				{{offer.title}}
+				<input type="checkbox" class="pull-right">
+			</div>
+			<div class="desc">
+				{{offer.desc}}
+			</div>
+			<table class="offer-table">
+				<tr>
+					<td>Price List</td>
+					<td>{{offer.Price_List}}</td>
+				</tr>
+				<tr>
+					<td>Dates</td>
+					<td>{{offer.Dates}}</td>
+				</tr>
+				<tr>
+					<td>Change Type</td>
+					<td>{{offer.Change_Type}}</td>
+				</tr>
+			</table>
+			<a href="">View</a>	
+		</div>
+	</div>
+</div>

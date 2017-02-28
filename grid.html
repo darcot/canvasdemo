@@ -1,0 +1,58 @@
+<ul class="breadcrumb">
+    <li><a href="#/grid">Dashboard</a></li> /
+    <li>
+		<div class="dropdown breadcrumb-dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tutorials
+			<span class="caret"></span></button>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#/offer-studio">Offer Studio</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#/">Products Studio</a></li>
+				<li role="presentation" class="active"><a role="menuitem" tabindex="-1" href="#/">Library</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#/">Tasks</a></li>
+			</ul>
+		</div>
+	</li>
+</ul>
+<div class="page-title">
+	Library
+</div>
+
+<div class="tools">
+	<div class="input-group pull-left">
+	  	<span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-search"></i></span>
+	  	<input type="text" class="form-control search-input" placeholder="search here" ng-model="search.title">
+	</div>
+	<ul class="list-inline pull-right">
+		<li>
+			<select name="filter" ng-model="filter">
+		      	<option value="">Filter: Change Type</option>
+		      	<option value="Change_Type">ASC</option>
+		      	<option value="-Change_Type">DESC</option>
+		    </select>	
+		</li>
+		<li>
+			<select name="sort" ng-model="sort">
+		      	<option value="">Sort: Name</option>
+		      	<option value="title">ASC</option>
+		      	<option value="-title">DESC</option>
+		      	
+		    </select>		
+		</li>
+	    <li>
+	    	<button class="btn bg-btn grid" ng-click="grid($event)"><i title="grid view" data-toggle="tooltip" class="glyphicon glyphicon-th"></i></button>	
+	    </li>
+	    <li>
+	    	<button class="btn bg-btn list" ng-click="list($event)"><i title="list view" data-toggle="tooltip" class="glyphicon glyphicon-list"></i></button>	
+	    </li>
+	</ul>
+</div>
+<div id="tabs" ng-controller="TabsCtrl">
+    <ul class="ang-tabs">
+        <li ng-repeat="tab in tabs" 
+            ng-class="{active:isActiveTab(tab.url)}" 
+            ng-click="onClickTab(tab)">{{tab.title}}</li>
+    </ul>
+    <div id="mainView">
+        <div ng-include="currentTab"></div>
+    </div>
+</div>

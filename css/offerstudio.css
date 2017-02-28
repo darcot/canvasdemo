@@ -1,0 +1,204 @@
+ .modal-header, h4, .close {
+      background-color: white;      
+      text-align: left; 
+     font-size: 25px;
+     line-height: 12px;    
+  }
+
+  .modal-content {
+      width: 80%;
+  }
+  .modal-footer {
+      background-color: white;
+      text-align: center;
+  }
+  
+  .modal-dialog {
+    margin: 110px auto;
+    width: 600px;
+  }
+
+  .eaContainer-SystemBarHolder {
+    height: 53px;
+    left: 0;
+    /*position: absolute;*/
+    top: 0;
+    width: 100%;
+}
+.eaContainer-SystemBar::before {
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(left center , #a2c517 10%, #009046 30%, #0082b6 50%, #151f77 70%, #db0050 100%) repeat scroll 0 0;
+    content: "";
+    font-size: 0;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    top: -4px;
+    width: 100%;
+}
+.eaContainer-SystemBar {
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #ffffff 0%, #f0f0f0 100%) repeat scroll 0 0;
+    border-top: 4px solid #0066b3;
+    box-shadow: 0 2px 2px #d2d2d2;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1.2rem;
+    height: 40px;
+    position: relative;
+    width: 100%;
+    z-index: 1500;
+}
+
+.eaContainer-SystemBar-logo {   
+    bottom: 0;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 40px;
+}
+
+.eaContainer-SystemBar-components {
+    bottom: 0;
+    left: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.eaContainer-SystemBar-right {
+    float: right;
+}
+
+.eaContainer-SystemBar-left {
+    overflow: hidden;
+}
+
+
+.eaContainer-SystemBar-name {
+    color: #58585a;
+    display: inline-block;
+    font-size: 1.4em;
+    line-height: 40px;
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 5px 0 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.eaLogoutButton {
+    display: inline-block;
+    line-height: 36px;
+    vertical-align: middle;
+}
+
+.eaLogoutButton-link {
+    background-color: transparent;   
+    background-position: 18px center;
+    background-repeat: no-repeat;
+    border-left: 1px solid #d2d2d2;
+    color: #0066b3;
+    cursor: pointer;
+    display: block;
+    font-size: 1.2rem;
+    padding: 0 18px 0 40px;
+    text-decoration: none;
+}
+
+.eaContainer-SystemBarComponent {
+    display: inline-block;
+    position: relative;
+}
+
+.eaContainer-SystemBarComponent-body {
+    border-left: 1px solid #d2d2d2;
+    cursor: pointer;
+    line-height: 35px;
+    padding: 0 10px;
+    vertical-align: top;
+}
+
+.eaContainer-SystemBarComponent-icon {
+   /* display: inline-block;*/
+    height: 16px;
+    vertical-align: middle;
+    width: 16px;
+}
+
+.eaContainer-SystemBarComponent-caption {
+    padding-left: 5px;
+    vertical-align: middle;
+    background-color: transparent;   
+    background-position: 18px center;
+    background-repeat: no-repeat;   
+    color: #0066b3;
+    cursor: pointer;
+    display: block;
+    font-size: 1.2rem;   
+    text-decoration: none;
+}
+
+.section {
+padding-left:20px;
+padding-right:20px;
+}
+
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+    float: right;
+    left: 0.5em;
+    margin-top: 0px;
+    position: relative;
+    top: 50%;
+}
+
+.a, a:hover {
+    font-size:1.4rem;
+    color: #0967b2;
+    text-decoration: none;
+}
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-family: Arial;
+    font-size: 1.2rem;
+}
+
+#editModal{
+    max-width: 100% !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    box-shadow: none !important;
+}
+
+#editModal .modal-dialog{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    width: 72%;
+}
+
+#editModal .modal-dialog .modal-content{
+    width: 100%;
+    height: 680px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.dotted-line
+{
+    border-bottom: 1px dotted #000000;
+}
+
+ul.offer-dropdown li a span{
+    margin-right: 5px;
+}
+
+.ui-accordion .ui-accordion-content{
+    padding: 1em;
+}
+
+.studio-library .offers
+{
+  background-color: #bdc3c7;
+  max-height: 180px;
+  overflow-y: scroll;
+}

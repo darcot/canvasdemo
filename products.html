@@ -1,0 +1,28 @@
+<div class="row offers" ng-controller="productsCtrl">
+	<div class="col-md-3 col-sm-4 col-xs-12 col-lg-3 view" ng-repeat="product in products | filter:search | orderBy:filter | orderBy:sort">
+		<div class="offer">
+			<div class="title">
+				{{product.title}}
+				<input type="checkbox" class="pull-right">
+			</div>
+			<div class="desc">
+				{{product.desc}}
+			</div>
+			<table class="offer-table">
+				<tr>
+					<td>Price List</td>
+					<td>{{product.Price_List}}</td>
+				</tr>
+				<tr>
+					<td>Dates</td>
+					<td>{{product.Dates}}</td>
+				</tr>
+				<tr>
+					<td>Change Type</td>
+					<td>{{product.Change_Type}}</td>
+				</tr>
+			</table>
+			<a href="">View</a>	
+		</div>
+	</div>
+</div>

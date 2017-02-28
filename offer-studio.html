@@ -1,0 +1,258 @@
+<ul class="breadcrumb">
+    <li><a href="#/grid">Dashboard</a></li> /
+    <li>
+		<div class="dropdown breadcrumb-dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tutorials
+			<span class="caret"></span></button>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#/offer-studio">Offer Studio</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#/">Products Studio</a></li>
+				<li role="presentation" class="active"><a role="menuitem" tabindex="-1" href="#/">Library</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#/">Tasks</a></li>
+			</ul>
+		</div>
+	</li> /
+	<li>Offer Studio</li>
+</ul>
+<div class="page-title">
+	Offer Studio
+</div>
+
+<div class="eaContainer-SystemBarHolder" ng-controller="offerStudioCtrl">
+	<div class="container">
+		<div class="modal fade" id="myModal" role="dialog"><form role="form" name="offerStudioForm">
+			<div class="modal-dialog">
+				<div class="modal-content">
+
+					<div class="modal-header" style="padding:35px 50px;">          
+						<h4>Create a new project</h4>
+					</div>
+
+					<div class="modal-body" style="padding:20px 120px;">
+
+						<div class="form-group">
+							<label></span>Project Name</label>
+							<input type="text" class="form-control" ng-model="offerName" placeholder="New Offer1" value="New Offer1" required>
+						</div>   
+
+					</div>
+
+					<div class="modal-footer">				  
+						<ul class="list-inline">
+							<li>
+								<button type="submit" class="btn btn-success" style="background-color:#337ab7;" ng-click="offer_create()" ng-disabled="offerStudioForm.$invalid" data-dismiss="modal">Create</button>
+							</li>
+							<li>
+								<button type="submit" class="btn btn-danger" data-dismiss="modal" style="background-color:grey;"></span>Cancel</button>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</form>
+	</div> 
+
+</div>
+
+<div id="section" style="padding-left:10px;padding-right:10px">
+
+	<div id="sectionHeader" style="padding-top:10px;padding-bottom:10px">
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="border-radius: 5px;">My Projects
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Offer</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Product</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Rates</a></li>
+				<li role="presentation" class="divider"></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+			</ul>		 
+			<input type="text" placeholder="New Offer" ng-model="offer_name" style="border:0;outline:0;background:transparent;border-bottom: 1px dotted black; width: 90px;" required>
+			<ul class="list-inline pull-right">
+				<li>
+					<button type="button" class="btn btn-primary" style="float:right">Send  to QA</button>
+				</li>
+				<li>
+					<button type="button" class="btn btn-primary" style="float:right">Publish</button>	
+				</li>
+				<li>
+					<button type="button" class="btn btn-primary" style="float:right; background-color:grey">Close</button>		
+				</li>
+			</ul>
+		</div>			
+	</div>		 
+
+
+	<div id="sectionBody" style="background-color:#d9d9d9; width:100%; height:400px; display:inline-block;">		
+		<div id="accordion" style="float:left; width:30%; background-color:#d9d9d9">			
+				<h3>Create <span style="float:right; margin-top:-2px;">+</span></h3>
+			<div>
+				<button class="btn btn-default dropdown-toggle" type="button" id="newOfferButton" data-toggle="dropdown" style="border-color:blue;">New Offer
+				<span>+</span></button>
+				<button class="btn btn-default dropdown-toggle" type="button" id="newProductButton" data-toggle="dropdown" style="border-color:blue;">New Product
+				<span>+</span></button>
+			</div>
+			<h3 class="library-view">Library <span style="float:right; margin-top:-2px;">+</span></h3>
+			<div class="studio-library">
+				<div class="tools2 row">
+					<div class="input-group pull-left">
+					  	<span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-search"></i></span>
+					  	<input type="text" class="form-control search-input" placeholder="search here" ng-model="search.title">
+					</div>
+					<ul class="list-inline">
+						<li>
+							<select name="filter" ng-model="filter">
+						      	<option value="">Filter: Change Type</option>
+						      	<option value="Change_Type">ASC</option>
+						      	<option value="-Change_Type">DESC</option>
+						    </select>	
+						</li>
+						<li>
+							<select name="sort" ng-model="sort">
+						      	<option value="">Sort: Name</option>
+						      	<option value="title">ASC</option>
+						      	<option value="-title">DESC</option>
+						    </select>		
+						</li>
+					</ul>
+				</div>
+				<div id="tabs" class="row">
+				    <ul class="ang-tabs">
+				        <li ng-repeat="tab in tabs" ng-class="{active:isActiveTab(tab.url)}" ng-click="onClickTab(tab)">{{tab.title}}</li>
+				    </ul>
+				    <div id="mainView">
+				        <div ng-include="currentTab"></div>
+				    </div>
+				</div>
+			</div>
+		</div>
+
+		<div style="float:left; width:30%; background-color:#d9d9d9; border-left: 1px solid white;  height: 400px;">
+			<p style="text-align:center;font:Arial;font-size:1.2rem;color: grey;">Project Level</p>
+			
+			<div style="margin: 10px auto;display:table;vertical-align:middle;">
+				<div class="dropdown" id="offer_menu">
+					<button class="btn btn-default dropdown-toggle" type="button" id="menu" data-toggle="dropdown" style="border-color:blue;font-family: Arial;font-size: 1.2rem;"><span class="dotted-line">{{offer_name}}</span>
+					<span class="caret"></span></button>
+					<ul class="dropdown-menu offer-dropdown" role="menu" aria-labelledby="menu">
+						<button type="button" class="close" data-dismiss="dropdown" aria-hidden="true">&times;</button>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#/offer-studio" class="edit"><span class="glyphicon glyphicon-edit"></span>Edit</a>					
+						</li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-duplicate"></span>Clone</a></li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-eye-open"></span>Preview</a></li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#" ng-click="delete()"><span class="glyphicon glyphicon-trash"></span>Delete</a></li>					
+					</ul>
+				</div>
+			</div>
+			<canvas id="myCanvas" width="250" height="1000">
+			
+			</canvas>	
+		</div>	 
+			
+		<div style="float:left; width:20%; background-color:#d9d9d9; border-left: 1px solid white;  height: 400px;" ng-drop="true" ng-drop-success="onDropComplete1($data,$event)">
+			<p style="text-align:center;font:Arial;font-size:1.2rem;color: grey;">Level 1</p>
+			
+			<div ng-repeat="obj in droppedObjects1" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess1($data,$event)" ng-center-anchor="{{centerAnchor}}" style="margin: 10px auto;display:table;vertical-align:middle;">
+              	
+              	<div class="dropdown">
+					<button class="btn btn-default dropdown-toggle" type="button" id="opt-menu{{$index}}" data-toggle="dropdown" style="border-color:blue;font-family: Arial;font-size: 1.2rem;"><span class="dotted-line">{{obj.title}}</span>
+					<span class="caret"></span></button>
+					<ul class="dropdown-menu offer-dropdown" role="menu" aria-labelledby="opt-menu{{$index}}">
+						<button type="button" class="close" data-dismiss="dropdown" aria-hidden="true">&times;</button>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#/offer-studio" class="edit"><span class="glyphicon glyphicon-edit"></span>Edit</a>					
+						</li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-duplicate"></span>Clone</a></li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-eye-open"></span>Preview</a></li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-trash"></span>Delete</a></li>					
+					</ul>
+				</div>
+          	</div>
+		</div>
+
+		<div style="float:left; width:20%; background-color:#d9d9d9; border-left: 1px solid white;  height: 400px;"  ng-drop="true" ng-drop-success="onDropComplete2($data,$event)">
+			<p style="text-align:center;font:Arial;font-size:1.2rem;color: grey;">Level 2</p>
+
+			<div ng-repeat="obj in droppedObjects2" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess2($data,$event)" ng-center-anchor="{{centerAnchor}}" style="margin: 10px auto;display:table;vertical-align:middle;">
+              	
+              	<div class="dropdown">
+					<button class="btn btn-default dropdown-toggle" type="button" id="menu{{obj.index}}" data-toggle="dropdown" style="border-color:blue;font-family: Arial;font-size: 1.2rem;"><span class="dotted-line">{{obj.title}}</span>
+					<span class="caret"></span></button>
+					<ul class="dropdown-menu offer-dropdown" role="menu" aria-labelledby="menu{{obj.index}}">
+						<button type="button" class="close" data-dismiss="dropdown" aria-hidden="true">&times;</button>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#/offer-studio" class="edit"><span class="glyphicon glyphicon-edit"></span>Edit</a>					
+						</li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-duplicate"></span>Clone</a></li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-eye-open"></span>Preview</a></li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-trash"></span>Delete</a></li>					
+					</ul>
+				</div>
+          	</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="modal" id="editModal" role="dialog" style="">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style="padding:5px 30px;">          
+				<h4 class="pull-left">Edit
+				</h4>
+				<ul class="list-inline pull-right">
+					<li>
+						<button type="submit" class="btn btn-success" data-dismiss="modal" style="background-color:#337ab7;" ng-click="save()">Save</button>
+					</li>
+					<li>
+						<button type="submit" class="btn btn-danger" data-dismiss="modal" style="background-color:grey;"></span>Cancel</button>		
+					</li>
+				</ul>
+			</div>
+
+			<div class="modal-body" style="padding:20px 120px;">
+				<form role="form" novalidate>
+					<div class="form-group">
+						<label></span>Offer Name</label>
+						<input type="text" class="form-control" ng-model="offer_name" placeholder="New Offer1" value="Basic Membership" required>
+						<label style="padding-top:30px"></span>Offer Description</label>
+						<input type="text" class="form-control" ng-model="offerDescription" placeholder="New Offer1" value="This is an offer description" style="width:240px;height:90px" required>
+						<label style="padding-top:30px"></span>Available Date</label>
+					   <div class="calender">			
+						<input  type="text" placeholder="Select Available Date"  id="availableDate" ng-model="availableDate" required>	
+						<span class="glyphicon glyphicon-calendar"></span>
+					   </div>
+					     <label style="padding-top:30px"></span>End Date</label>
+					   <div class="calender">			
+						<input  type="text" placeholder="Select End Date"  id="endDate" ng-model="endDate" required>	
+						<span class="glyphicon glyphicon-calendar"></span>
+					   </div>
+						<label style="padding-top:30px"></span>Nested Under</label>
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">None
+								<span class="caret"></span></button>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">					
+									<li role="presentation" class="divider"></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">A</a></li>
+									<li role="presentation" class="divider"></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">B</a></li>
+									<li role="presentation" class="divider"></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">C</a></li>					
+								</ul>
+							</div>
+						</div>   
+					</form>
+				</div>
+			</div>
+		</div>
+	</div> 
+</div>	
